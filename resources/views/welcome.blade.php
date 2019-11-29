@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
                     Welcome to Powatroniks Tech Hub
                 </div>
-
+                <p>Rivers State University of Science and Technology, Port Harcourt </p>
                 <div class="links">
                     <a href="https://github.com/Tetranyble">Meet the developer </a>
 
