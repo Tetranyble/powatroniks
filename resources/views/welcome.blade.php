@@ -81,8 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to Powatroniks Tech Hub
+                    Welcome to Powatroniks. The Electronic Project Tinkering Ground.
                 </div>
+                <h3>For the fun of Electrical and Computer Engineering and betterment our society. you will love it.</h3>
                 <p>Rivers State University of Science and Technology, Port Harcourt </p>
                 <div class="links">
                     <a href="https://github.com/Tetranyble">Meet the developer </a>

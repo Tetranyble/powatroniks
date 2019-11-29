@@ -14,6 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
-    return view('Hello world');
-});
+
+Route::get('/projects', 'ProjectsController@index');
