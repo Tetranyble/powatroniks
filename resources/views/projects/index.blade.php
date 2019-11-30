@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+        <title>Projects</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -83,6 +83,12 @@
         <div class="title m-b-md">
             Welcome to projects tinkering directory
         </div>
+        @foreach($projects as $project)
+            <ul>
+                <li><a href="/projects/{{$project->id}}">{{ $project->title }}</a></li>
+            </ul>
+
+        @endforeach
         <p>Rivers State University of Science and Technology, Port Harcourt </p>
         <div class="links">
             <a href="https://github.com/Tetranyble">Meet the developer </a>
