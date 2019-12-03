@@ -25,6 +25,7 @@ class ProjectsController extends Controller
         return redirect('/projects');
     }
     public function show(Project $project){
+        $this->authorize('update', $project);
         return view('projects.show', compact('project'));
     }
     public function edit(Project $project){

@@ -15,7 +15,7 @@ class Projects extends Migration
     {
         Schema::create('projects',function (Blueprint $table){
             $table->string('description');
-            $table->unsignedInteger('owner_id');
+            $table->unsignedBigInteger('owner_id');
             $table->increments('id')->unique();
             $table->string('title');
             $table->timestamps();
