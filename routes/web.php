@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('projects', 'ProjectsController');
-Route::resource('tasks', 'ProjectsTaskController');
+
+Route::post('/projects/{project}/tasks', 'ProjectsTaskController@store');
+
+Route::patch('/tasks/{task}', 'ProjectsTaskController@update');
 /*Route::get('/projects', 'ProjectsController@index');
 Route::post('/projects', 'ProjectsController@store');
 Route::get('/projects/create', 'ProjectsController@create');
@@ -25,3 +28,7 @@ Route::get('/projects/{project}', 'ProjectsController@show');
 Route::get('/projects/{project}/edit', 'ProjectsController@edit');
 Route::patch('/projects/{project}', 'ProjectsController@update');
 Route::delete('/projects/{project}', 'ProjectsController@destroy');*/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

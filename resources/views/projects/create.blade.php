@@ -12,14 +12,6 @@
         <div>
             <button type="submit"> save project</button>
         </div>
-        @if($errors->any())
-        <div>
-            @foreach($errors->all() as $error)
-                <ul>
-                    <li>{{$error}}</li>
-                </ul>
-            @endforeach
-        </div>
-        @endif
+       @include('error')
     </form>
 @endsection

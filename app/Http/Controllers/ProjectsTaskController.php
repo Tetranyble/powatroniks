@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use App\Task;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,15 @@ class ProjectsTaskController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Project $project)
     {
-        //
+
+        $project->addTask(\request()->validate(['description'=> 'required']));
+        //Task::create([
+        //    'project_id' => $project->id,
+        //    'description' => \request('description')
+        //]);
+        return back();
     }
 
     /**
@@ -69,9 +76,11 @@ class ProjectsTaskController extends Controller
      */
     public function update(Task $task)
     {
-        $task::updated(\request([
-            'completed' => \request()->has('completed');
-        ]));
+        $task->complete(\request()->has('completed'));
+//        $task::update(\request([
+//            'completed' => \request()->has('completed')
+//        ]));
+        return back();
     }
 
     /**

@@ -36,4 +36,5 @@ class ProjectsController extends Controller
         $project->delete();
         return redirect('/projects');
     }
+
 }

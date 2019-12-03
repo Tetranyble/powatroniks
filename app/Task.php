@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    protected $fillable = ['completed'];
+    protected $guarded = [];
     public function project(){
-        return$this->belongsTo(Project::class);
+        return $this->belongsTo(Project::class);
+    }
+    public function complete($completed = true){
+        $this->update([
+            'completed' => $completed
+        ]);
     }
 }
