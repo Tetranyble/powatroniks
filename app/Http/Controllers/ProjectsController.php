@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['show']);
+    }
+
     public function index(){
         $projects = Project::all();
         return view('projects.index', ['projects' => $projects]);
@@ -15,7 +20,7 @@ class ProjectsController extends Controller
         return view('projects.create');
     }
     public function store(){
-        Project::create(\request()->validate(['title'=>['required','min:5'],'description'=>['required','min:10']]));
+        Project::create(\request()->validate(['title'=>['required','min:5'],'description'=>['required','min:10']]) + ['owner_id'=>auth()->id()]);
 
         return redirect('/projects');
     }
