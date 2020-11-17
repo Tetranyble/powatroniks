@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^pensuh\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.pensuh\.com$
+RewriteRule ^/?$ "https\:\/\/www\.pensuh\.com\/" [R=302,L]
