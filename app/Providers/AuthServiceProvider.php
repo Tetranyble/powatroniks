@@ -16,7 +16,7 @@ class AuthServiceProvider extends ServiceProvider
         'App\Project' => 'App\Policies\ProjectPolicy',
     ];
 
-    /**
+    /**com
      * Register any authentication / authorization services.
      *
      * @return void

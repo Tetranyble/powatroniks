@@ -75,7 +75,7 @@ class ProjectsTaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Task $task)
-    {
+    { 
         $task->complete(\request()->has('completed'));
 //        $task::update(\request([
 //            'completed' => \request()->has('completed')
