@@ -1,7 +1,7 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^pensuh\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.pensuh\.com$
-RewriteRule ^/?$ "https\:\/\/www\.pensuh\.com\/" [R=302,L]
+RewriteCond %{HTTP_HOST} ^presense\.me$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.presense\.me$
+RewriteRule ^/?$ "https\:\/\/www\.presense\.me\/" [R=302,L]
 
 #RewriteCond %{REQUEST_URI} !web/
 #RewriteRule (.*) /public/$1 [L]
