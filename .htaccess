@@ -2,3 +2,17 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^pensuh\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.pensuh\.com$
 RewriteRule ^/?$ "https\:\/\/www\.pensuh\.com\/" [R=302,L]
+
+#RewriteCond %{REQUEST_URI} !web/
+#RewriteRule (.*) /public/$1 [L]
+RewriteCond %{HTTP_HOST} ^presense.me$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.presense.me$
+RewriteCond %{REQUEST_URI} !web/
+RewriteRule (.*) /public/$1 [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php56” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php56___lsphp .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
