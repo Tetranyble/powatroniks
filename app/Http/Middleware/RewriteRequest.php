@@ -16,7 +16,7 @@ class RewriteRequest
     public function handle($request, Closure $next)
     {
         //dd($request->ip());
-        dd($request->headers, $request->getSchemeAndHttpHost());
+        dd($request->headers, $request->getSchemeAndHttpHost(), $request->server('SERVER_NAME'), $_SERVER['SERVER_NAME']);
         return $next($request);
     }
 }
