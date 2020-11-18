@@ -15,7 +15,7 @@ class RewriteRequest
      */
     public function handle($request, Closure $next)
     {
-        dd($request->ip());
+        dd($request);
         //dd(request()->headers->get('referer'));
         return $next($request);
     }
