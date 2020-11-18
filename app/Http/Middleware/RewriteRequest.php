@@ -15,8 +15,8 @@ class RewriteRequest
      */
     public function handle($request, Closure $next)
     {
-        dd($request);
-        //dd(parse_url(request()->headers->get('referer'), PHP_URL_HOST));
+        //dd($request);
+        dd(parse_url(request()->headers->get('referer'), PHP_URL_HOST));
         return $next($request);
     }
 }

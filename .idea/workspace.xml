@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d774662-2215-4007-a94a-89ce6f444604" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RewriteRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RewriteRequest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +161,8 @@
       <workItem from="1575407667292" duration="1506000" />
       <workItem from="1584249797876" duration="691000" />
       <workItem from="1584251789308" duration="6602000" />
-      <workItem from="1605638549347" duration="2049000" />
+      <workItem from="1605638549347" duration="2312000" />
+      <workItem from="1605682506649" duration="615000" />
     </task>
     <servers />
   </component>
